@@ -16,7 +16,18 @@
         <meta name="description" content="sito ufficiale MMT - cagliari,italia">
         <meta name="author" content="Luca Camboni">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script>
+            $(function() {
+                $( "#menu" ).menu({
+                    items: "> :not(.ui-widget-header)"
+                });
+            });
+        </script>
     </head>
+<!-------------------------------------------------------------------------------------------------------------------->
     <body>
         <header>
             <h1>MMT</h1>
@@ -32,6 +43,16 @@
         </header>
         <nav class="colL">
             <h2>Indice</h2>
+            <ul id="menu">
+                <li class="ui-widget-header">Category 1</li>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li class="ui-widget-header">Category 2</li>    
+                <li>Option 4</li>
+                <li>Option 5</li>
+                <li>Option 6</li>
+            </ul>
             <ol>
                 <li>
                     <a class="man" href="#prodotti">Cosa vendiamo</a> 

@@ -15,7 +15,7 @@
         <meta name="description" content="MMT - Compra">
         <meta name="author" content="Luca Camboni">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-        <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
         <script type="text/javascript" src="js/searchInsertion.js"></script>
 
     </head>

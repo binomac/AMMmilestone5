@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page session="true" %>
 
 <!DOCTYPE html>
 <html>
@@ -17,6 +18,10 @@
         <meta name="description" content="MMT - login">
         <meta name="author" content="Luca Camboni">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/errorManager.js"></script>
     </head>
     <body>
         <header>
@@ -27,8 +32,26 @@
                <ul>
                    <li><a class="man" href="descrizione.jsp">HOME</a></li>
                     <li class="currpag"><a href="Login">Login</a></li>
-                    <li><a class="man" href="Venditore">Vendi</a></li>
-                    <li><a class="man" href="Cliente">Compra</a></li>
+                    <li class="man"><a 
+                             <c:choose>
+                                <c:when test="${sessionScope.LoggedIn == null }">
+                                    class="errorLinkAutentication"</c:when>
+                                <c:when test="${sessionScope.loggedIn != null || sessionScope.loggedIn == true || sessionScope.UserVenditore != null}">
+                                    </c:when>
+                                <c:when test="${sessionScope.loggedIn != null || sessionScope.loggedIn == true || sessionScope.UserCliente != null}">
+                                    class="errorLinkPermission"</c:when>
+                            </c:choose>
+                            href="Venditore">Vendi</a></li>
+                    <li class="man"><a 
+                             <c:choose>
+                                <c:when test="${sessionScope.loggedIn == null }">
+                                    class="errorLinkAutentication"</c:when>
+                                <c:when test="${sessionScope.loggedIn != null || sessionScope.loggedIn == true || sessionScope.UserCliente != null}">
+                                    </c:when>
+                                <c:when test="${sessionScope.loggedIn != null || sessionScope.loggedIn == true || sessionScope.UserVenditore != null}">
+                                    class="errorLinkPermission"</c:when>
+                            </c:choose>
+                            href="Cliente">Compra</a></li>
                 </ul>
                 
             </nav>

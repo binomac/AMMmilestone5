@@ -29,10 +29,10 @@
             <nav>
                 
                <ul>
-                   <li><a class="man" href="descrizione.jsp">HOME</a></li>
+                   <li class="man" ><a href="descrizione.jsp">HOME</a></li>
                     <li class="currpag"><a href="Login">Login</a></li>
-                    <li><a class="man" id="not" href="Venditore">Vendi</a></li>
-                    <li><a class="man" href="Cliente">Compra</a></li>
+                    <li class="man"><a class="errorLinkPermission" href="Venditore">Vendi</a></li>
+                    <li class="man" ><a href="Cliente">Compra</a></li>
                 </ul>
                 
             </nav>

@@ -3,7 +3,7 @@
     Created on : 21-apr-2016, 17.08.18
     Author     : luca
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -19,6 +19,7 @@
         <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
         <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/errorManager.js"></script>
         <script>
             $(function() {
                 $( "#menu" ).menu({
@@ -35,9 +36,27 @@
             <nav>
                 <ul>
                     <li class="currpag"><a href="descrizione.jsp">HOME</a></li>
-                    <li><a class="man" href="Login">Login</a></li>
-                    <li><a class="man" href="Venditore">Vendi</a></li>
-                    <li><a class="man" href="Cliente">Compra</a></li>
+                    <li class="man"><a href="Login">Login</a></li>
+                    <li class="man"><a 
+                             <c:choose>
+                                <c:when test="${loggedIn == null && loggedIn == false}">
+                                    class="errorLinkAutentication"</c:when>
+                                <c:when test="${loggedIn != null || loggedIn == true || UserVenditore != null}">
+                                    </c:when>
+                                <c:when test="${loggedIn != null || loggedIn == true || UserCliente != null}">
+                                    class="errorLinkPermission"</c:when>
+                            </c:choose>
+                            href="Venditore">Vendi</a></li>
+                    <li class="man"><a 
+                             <c:choose>
+                                <c:when test="${loggedIn == null && loggedIn == false}">
+                                    class="errorLinkAutentication"</c:when>
+                                <c:when test="${loggedIn != null || loggedIn == true || UserCliente != null}">
+                                    </c:when>
+                                <c:when test="${loggedIn != null || loggedIn == true || UserVenditore != null}">
+                                    class="errorLinkPermission"</c:when>
+                            </c:choose>
+                            href="Cliente">Compra</a></li>
                 </ul>
             </nav>
         </header>

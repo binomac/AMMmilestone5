@@ -17,6 +17,10 @@
         <meta name="description" content="MMT - login">
         <meta name="author" content="Luca Camboni">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/errorManager.js"></script>
     </head>
     <body>
         <header>
@@ -28,7 +32,7 @@
                    <li><a class="man" href="descrizione.jsp">HOME</a></li>
                     <li class="currpag"><a href="Login">Login</a></li>
                     <li><a class="man" href="Venditore">Vendi</a></li>
-                    <li><a class="man" href="Cliente">Compra</a></li>
+                    <li><a class="man errorLink" href="Cliente">Compra</a></li>
                 </ul>
                 
             </nav>

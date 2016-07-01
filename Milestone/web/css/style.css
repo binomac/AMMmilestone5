@@ -292,4 +292,10 @@ footer h2 {
 footer h3 {
     font-size: 0.7em;
 }
+ui-dialog{
+    margin: auto;
+}
+ui-dialog-header{
+    background-color: lightcoral;
+}
 }

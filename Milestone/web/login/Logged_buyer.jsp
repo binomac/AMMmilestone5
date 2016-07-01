@@ -14,11 +14,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="MMT - login">
         <meta name="author" content="Luca Camboni">
-        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />      
         <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="js/errorManager.js"></script>
+        <script src="js/jquery.growl.js" type="text/javascript"></script>
         
 
     </head>

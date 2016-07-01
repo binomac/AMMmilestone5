@@ -17,9 +17,12 @@
         <meta name="author" content="Luca Camboni">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="js/errorManager.js"></script>
+        <script src="js/jquery.growl.js" type="text/javascript"></script>
+        
         <script>
             $(function() {
                 $( "#menu" ).menu({
@@ -37,23 +40,23 @@
                 <ul>
                     <li class="currpag"><a href="descrizione.jsp">HOME</a></li>
                     <li class="man"><a href="Login">Login</a></li>
-                    <li class="man"><a 
+                     <li class="man"><a 
                              <c:choose>
-                                <c:when test="${loggedIn == null && loggedIn == false}">
+                                <c:when test="${sessionScope.loggedIn == null }">
                                     class="errorLinkAutentication"</c:when>
-                                <c:when test="${loggedIn != null || loggedIn == true || UserVenditore != null}">
+                                <c:when test="${sessionScope.loggedIn != null && sessionScope.loggedIn == true && sessionScope.UserVenditore != null}">
                                     </c:when>
-                                <c:when test="${loggedIn != null || loggedIn == true || UserCliente != null}">
+                                <c:when test="${sessionScope.loggedIn != null && sessionScope.loggedIn == true && sessionScope.UserCliente != null}">
                                     class="errorLinkPermission"</c:when>
                             </c:choose>
                             href="Venditore">Vendi</a></li>
                     <li class="man"><a 
                              <c:choose>
-                                <c:when test="${loggedIn == null && loggedIn == false}">
+                                <c:when test="${sessionScope.loggedIn == null }">
                                     class="errorLinkAutentication"</c:when>
-                                <c:when test="${loggedIn != null || loggedIn == true || UserCliente != null}">
+                                <c:when test="${sessionScope.loggedIn != null && sessionScope.loggedIn == true && sessionScope.UserCliente != null}">
                                     </c:when>
-                                <c:when test="${loggedIn != null || loggedIn == true || UserVenditore != null}">
+                                <c:when test="${sessionScope.loggedIn != null && sessionScope.loggedIn == true && sessionScope.UserVenditore != null}">
                                     class="errorLinkPermission"</c:when>
                             </c:choose>
                             href="Cliente">Compra</a></li>

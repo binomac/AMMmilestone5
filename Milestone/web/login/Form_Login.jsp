@@ -8,6 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page session="true" %>
 
+
 <!DOCTYPE html>
 <html>
     <html>
@@ -19,9 +20,11 @@
         <meta name="author" content="Luca Camboni">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="js/errorManager.js"></script>
+        <script src="js/jquery.growl.js" type="text/javascript"></script>
     </head>
     <body>
         <header>

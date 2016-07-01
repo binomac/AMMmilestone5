@@ -15,8 +15,13 @@
         <meta name="description" content="MMT - Compra">
         <meta name="author" content="Luca Camboni">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/errorManager.js"></script>
         <script type="text/javascript" src="js/searchInsertion.js"></script>
+        <script src="js/jquery.growl.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -26,9 +31,9 @@
             <nav>
                 
                 <ul>
-                    <li><a class="man" href="descrizione.jsp">HOME</a></li>
-                    <li><a class="man" href="Login">Login</a></li>
-                    <li><a class="man" href="Venditore">Vendi</a></li>
+                    <li class="man"><a  href="descrizione.jsp">HOME</a></li>
+                    <li class="man"><a  href="Login">Login</a></li>
+                    <li class="man"><a class="errorLinkPermission" href="Venditore">Vendi</a></li>
                     <li class="currpag"><a href="Cliente">Compra</a></li>
                 </ul>
                 
@@ -130,11 +135,11 @@
             <section>
                 
                     <h3>Mezzi nautici</h3>
-                
+                <h4>Yathc</h4>
                 <label for="ricerca">Barra di ricerca</label>
                 <input type="text" id="ricercaYatch" size="15"/>
                 
-                    <h4>Yathc</h4>
+                    
                 
                 <table id="yatch">
                 <tr>
